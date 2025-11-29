@@ -1,38 +1,94 @@
-# sv
+# AI Lang (Artificial Intelligence Language)
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+A high-dimensional meta-language system designed to deliver human intent to AI systems with maximum precision.
 
-## Creating a project
+## What is AI Lang?
 
-If you're seeing this, you've probably already done this step. Congrats!
+AI Lang is a sophisticated communication language system that goes beyond traditional natural language-based prompt engineering. It enables humans to interact with AI by understanding and utilizing the AI system's internal structure, knowledge access methods, agent collaboration patterns, and context management approaches.
 
-```sh
-# create a new project in the current directory
-npx sv create
+**If a prompt is a sentence, AI Lang is more like a 'grammar'.**
 
-# create a new project in my-app
-npx sv create my-app
+## Why AI Lang?
+
+When humans write prompts in natural language, intermediate tools (chatbots, agents, etc.) mix many elements before delivering to AI:
+- System Prompts
+- Context (Memory, Session Information)
+- RAG (Retrieval-Augmented Generation)
+- Agent Chains (Agent, MCP, etc.)
+- Tool Usage Instructions
+- And more...
+
+Humans cannot communicate directly with AI. AI Lang provides a structured way to communicate more precisely with AI through these intermediaries.
+
+## Key Features
+
+- **AI-Friendly Structuring**: Expresses commands, constraints, intent, context, and roles more explicitly than natural language
+- **System Layer Awareness**: Unifies RAG, tool calls, and multi-agent logic into a single grammar
+- **Extensible Meta-Language**: Flexible structure based on sub-rules that can be applied even when models change
+- **Intent-to-Action Loss Minimization**: Reduces ambiguity and compresses meaning into a form that AI can execute precisely
+
+## Grammar (YAML-based)
+
+AI Lang uses YAML format to convey intent to AI in a structured way:
+
+```yaml
+intent: CREATE. Add a chat feature.
+
+persona:
+  role: Python Backend Developer
+  expertise: FastAPI, Authentication Systems
+
+context:
+  domain: Software Development
+  language: Python
+  framework: FastAPI
+
+constraints:
+  must:
+    - Type safety guaranteed
+    - Async processing support
+  should:
+    - Detailed documentation
+
+output:
+  type: code
+  format: Python
+
+request: |
+  Implement a JWT token-based user
+  authentication API.
 ```
 
-## Developing
+## Intent Types
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+| Type | Description | Example |
+|------|-------------|---------|
+| CREATE | Generate something new | `intent: CREATE. Add a chat feature.` |
+| UPDATE | Improve existing content | `intent: UPDATE. Improve the login screen.` |
+| TRANSFORM | Transform content | `intent: TRANSFORM. Translate to Korean.` |
+| ANALYZE | Analyze and evaluate | `intent: ANALYZE. Analyze performance issues.` |
+| EXPLAIN | Explain and educate | `intent: EXPLAIN. Explain the auth system.` |
+| VALIDATE | Verify and validate | `intent: VALIDATE. Verify API response.` |
+| DEBUG | Fix bugs | `intent: DEBUG. Fix the login bug.` |
+| TROUBLESHOOT | Resolve issues | `intent: TROUBLESHOOT. Resolve connection error.` |
+| MIGRATE | Migration tasks | `intent: MIGRATE. Migrate to PostgreSQL.` |
+| DECIDE | Decision support | `intent: DECIDE. React vs Vue?` |
 
-```sh
-npm run dev
+## Website
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+Visit [ailang.dev](https://ailang.dev) for full documentation, examples, and specification.
 
-## Building
+## Community
 
-To create a production version of your app:
+- **GitHub**: [https://github.com/thruthesky/ailang](https://github.com/thruthesky/ailang)
+- **Discussions**: [https://github.com/thruthesky/ailang/discussions](https://github.com/thruthesky/ailang/discussions)
 
-```sh
-npm run build
-```
+## Contact
 
-You can preview the production build with `npm run preview`.
+JaeHo Song <thruthesky@gmail.com>
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+## License
+
+MIT License
+
+© 2024 AI Lang Project

@@ -175,5 +175,8 @@
 	"grammar_intent_update": "intent: UPDATE. Improve the existing login screen.",
 	"grammar_intent_debug": "intent: DEBUG. Fix the login failure bug.",
 	"grammar_intent_troubleshoot": "intent: TROUBLESHOOT. Resolve the server connection error.",
-	"grammar_intent_migrate": "intent: MIGRATE. Migrate from MySQL to PostgreSQL."
+	"grammar_intent_migrate": "intent: MIGRATE. Migrate from MySQL to PostgreSQL.",
+	"footer_discussions": "Community Forum",
+	"footer_contact": "Contact",
+	"footer_contact_name": "JaeHo Song"
 }

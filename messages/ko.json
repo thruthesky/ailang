@@ -176,5 +176,8 @@
 	"grammar_intent_debug": "목적: DEBUG. 로그인 실패 버그를 수정해주세요.",
 	"grammar_intent_troubleshoot": "목적: TROUBLESHOOT. 서버 연결 오류를 해결해주세요.",
 	"grammar_intent_migrate": "목적: MIGRATE. MySQL에서 PostgreSQL로 마이그레이션해주세요.",
-	"grammar_key_intent_required": "(필수)"
+	"grammar_key_intent_required": "(필수)",
+	"footer_discussions": "커뮤니티 포럼",
+	"footer_contact": "연락처",
+	"footer_contact_name": "JaeHo Song"
 }

@@ -1,17 +1,11 @@
-# Cloudflare Workers 배포 설정
+# Cloudflare Pages 배포 설정
 # 자세한 설정은 https://developers.cloudflare.com/workers/wrangler/configuration/ 참고
 
 name = "ailang"
 compatibility_date = "2024-11-01"
 compatibility_flags = ["nodejs_compat"]
 
-# SvelteKit adapter-cloudflare 빌드 출력 디렉토리
-main = ".svelte-kit/cloudflare/_worker.js"
-assets = { directory = ".svelte-kit/cloudflare", binding = "ASSETS" }
+# SvelteKit adapter-cloudflare 빌드 출력 디렉토리 (Pages용)
+pages_build_output_dir = ".svelte-kit/cloudflare"
 
-# 커스텀 도메인 설정 (ailang.dev)
-# Cloudflare 대시보드에서 도메인을 추가한 후 아래 설정이 적용됩니다
-routes = [
-	{ pattern = "ailang.dev", custom_domain = true },
-	{ pattern = "www.ailang.dev", custom_domain = true }
-]
+# 커스텀 도메인 설정 (ailang.dev)은 Cloudflare Pages 대시보드에서 직접 설정합니다

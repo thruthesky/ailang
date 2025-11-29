@@ -2,7 +2,6 @@
 	// 루트 레이아웃 컴포넌트
 	// 네비게이션과 푸터를 포함한 전체 페이지 구조를 정의합니다
 	import './layout.css';
-	import favicon from '$lib/assets/favicon.svg';
 	import { m } from '$lib/paraglide/messages.js';
 	import Navigation from '$lib/components/Navigation.svelte';
 	import Footer from '$lib/components/Footer.svelte';
@@ -11,7 +10,7 @@
 </script>
 
 <svelte:head>
-	<link rel="icon" href={favicon} />
+	<link rel="icon" type="image/png" href="/favicon.png" />
 	<title>{m.site_title()}</title>
 	<meta name="description" content={m.site_description()} />
 	<!-- Open Graph 메타 태그 -->
