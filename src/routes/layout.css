@@ -1,0 +1,98 @@
+/* AI Lang 전역 스타일 */
+/* Tailwind CSS 및 플러그인 임포트 */
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+/* 기본 폰트 및 스타일 설정 */
+html {
+	/* 부드러운 스크롤 동작 */
+	scroll-behavior: smooth;
+}
+
+body {
+	/* 기본 배경색 및 텍스트 색상 */
+	@apply bg-slate-900 text-slate-100;
+	/* 안티앨리어싱으로 텍스트 가독성 향상 */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* 섹션 간 여백 설정 */
+section {
+	@apply py-16 md:py-24;
+}
+
+/* 링크 기본 스타일 */
+a {
+	@apply transition-colors;
+}
+
+/* 코드 블록 기본 스타일 */
+code {
+	@apply font-mono;
+}
+
+pre {
+	@apply overflow-x-auto;
+}
+
+/* 테이블 스타일 (비교 섹션용) */
+table {
+	@apply w-full border-collapse;
+}
+
+th, td {
+	@apply px-4 py-3 text-left;
+}
+
+/* 스크롤바 스타일 (다크 테마에 맞춤) */
+::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+::-webkit-scrollbar-track {
+	@apply bg-slate-800;
+}
+
+::-webkit-scrollbar-thumb {
+	@apply bg-slate-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	@apply bg-slate-500;
+}
+
+/* 선택 영역 스타일 */
+::selection {
+	@apply bg-indigo-600 text-white;
+}
+
+/* Prose 스타일 오버라이드 (다크 테마용) */
+.prose {
+	@apply text-slate-300;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+	@apply text-slate-100;
+}
+
+.prose a {
+	@apply text-indigo-400 hover:text-indigo-300;
+}
+
+.prose strong {
+	@apply text-slate-100;
+}
+
+.prose code {
+	@apply text-indigo-300 bg-slate-800 px-1 py-0.5 rounded;
+}
+
+.prose blockquote {
+	@apply border-indigo-500 text-slate-400;
+}
