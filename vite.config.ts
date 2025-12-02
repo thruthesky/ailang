@@ -12,7 +12,9 @@ export default defineConfig({
 		devtoolsJson(),
 		paraglideVitePlugin({
 			project: './project.inlang',
-			outdir: './src/lib/paraglide'
+			outdir: './src/lib/paraglide',
+			// 브라우저 언어 자동 감지 전략: 쿠키 -> 브라우저 언어 -> 기본 언어
+			strategy: ['cookie', 'preferredLanguage', 'baseLocale']
 		})
 	],
 	test: {

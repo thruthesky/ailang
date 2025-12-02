@@ -30,93 +30,6 @@
 		}
 	}
 
-	// AI Lang 예시 코드들 (YAML 형식) - 한글 키워드 사용
-	// 코드 생성 예시
-	const example1 = `목적: JWT 토큰 기반 사용자 인증 API를 구현합니다
-
-역할:
-  담당: FastAPI 개발 전문가
-  전문분야: Python 백엔드, 인증 시스템
-
-맥락:
-  도메인: 소프트웨어 개발
-  언어: Python
-  프레임워크: FastAPI
-
-제약조건:
-  필수:
-    - 타입 안전성 보장
-    - 비동기 처리 지원
-  권장:
-    - 상세한 문서화
-
-출력:
-  형식: 코드
-  포맷: Python
-  주석: 한국어로 상세히
-
-스타일:
-  간결함: true
-  최대줄수: 100
-
-요청: |
-  사용자 인증 API 엔드포인트를 구현해주세요.
-  JWT 토큰 기반 인증을 사용합니다.`;
-
-	// 문서 분석 예시
-	const example2 = `목적: 소프트웨어 라이선스 계약서의 리스크를 분석합니다
-
-역할:
-  담당: 법률 문서 분석 전문가
-  전문분야: 계약서 검토, 리스크 분석
-
-맥락:
-  도메인: 법률
-  문서유형: 계약서
-
-제약조건:
-  초점:
-    - 리스크 요소
-    - 의무 조항
-  분석깊이: 상세
-
-출력:
-  형식: 구조화된 보고서
-  섹션:
-    - 요약
-    - 리스크 분석
-    - 권장사항
-  언어: 한국어
-
-요청: |
-  첨부된 소프트웨어 라이선스 계약서를 검토해주세요.`;
-
-	// 콘텐츠 변환 예시
-	const example3 = `목적: React 공식 문서를 한국어로 번역합니다
-
-역할:
-  담당: 기술 번역 전문가
-  전문분야: React, 프론트엔드 문서
-
-맥락:
-  원본언어: 영어
-  대상언어: 한국어
-  도메인: 기술 문서
-
-제약조건:
-  유지:
-    - 코드 블록
-    - URL 링크
-    - 문서 포맷
-  어조: 격식체
-
-출력:
-  형식: 마크다운
-  구조유지: true
-
-요청: |
-  React 공식 문서를 번역해주세요.`;
-
 </script>
 
 <!-- ===== Hero 섹션 ===== -->
@@ -156,6 +69,18 @@
 					{m.hero_cta_examples()}
 				</a>
 			</div>
+		</div>
+	</div>
+</section>
+
+<!-- ===== 목표 섹션 ===== -->
+<section id="goal" class="bg-linear-to-r from-indigo-900/50 to-purple-900/50">
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+		<div class="max-w-4xl mx-auto text-center">
+			<h2 class="text-3xl md:text-4xl font-bold text-white mb-6">{m.goal_title()}</h2>
+			<p class="text-xl text-slate-200 leading-relaxed">
+				{m.goal_description()}
+			</p>
 		</div>
 	</div>
 </section>
@@ -408,12 +333,32 @@
 						<p class="text-slate-400 mt-2">{m.grammar_directive_intent()}</p>
 					</div>
 					<div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+						<code class="text-indigo-400 font-semibold">{m.grammar_key_reason()}</code>
+						<p class="text-slate-400 mt-2">{m.grammar_directive_reason()}</p>
+					</div>
+					<div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
 						<code class="text-indigo-400 font-semibold">{m.grammar_key_persona()}</code>
 						<p class="text-slate-400 mt-2">{m.grammar_directive_persona()}</p>
 					</div>
 					<div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
 						<code class="text-indigo-400 font-semibold">{m.grammar_key_context()}</code>
 						<p class="text-slate-400 mt-2">{m.grammar_directive_context()}</p>
+					</div>
+					<div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+						<code class="text-indigo-400 font-semibold">{m.grammar_key_current_state()}</code>
+						<p class="text-slate-400 mt-2">{m.grammar_directive_current_state()}</p>
+					</div>
+					<div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+						<code class="text-indigo-400 font-semibold">{m.grammar_key_reproduce()}</code>
+						<p class="text-slate-400 mt-2">{m.grammar_directive_reproduce()}</p>
+					</div>
+					<div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+						<code class="text-indigo-400 font-semibold">{m.grammar_key_expected_result()}</code>
+						<p class="text-slate-400 mt-2">{m.grammar_directive_expected_result()}</p>
+					</div>
+					<div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+						<code class="text-indigo-400 font-semibold">{m.grammar_key_guidelines()}</code>
+						<p class="text-slate-400 mt-2">{m.grammar_directive_guidelines()}</p>
 					</div>
 					<div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
 						<code class="text-indigo-400 font-semibold">{m.grammar_key_constraints()}</code>
@@ -584,21 +529,21 @@
 			<div>
 				<h3 class="text-xl font-bold text-slate-100 mb-2">{m.example_1_title()}</h3>
 				<p class="text-slate-400 mb-4">{m.example_1_desc()}</p>
-				<CodeBlock code={example1} title={m.example_1_title()} />
+				<CodeBlock code={m.example_1_code()} title={m.example_1_title()} />
 			</div>
 
 			<!-- 예시 2: 문서 분석 -->
 			<div>
 				<h3 class="text-xl font-bold text-slate-100 mb-2">{m.example_2_title()}</h3>
 				<p class="text-slate-400 mb-4">{m.example_2_desc()}</p>
-				<CodeBlock code={example2} title={m.example_2_title()} />
+				<CodeBlock code={m.example_2_code()} title={m.example_2_title()} />
 			</div>
 
 			<!-- 예시 3: 콘텐츠 변환 -->
 			<div>
 				<h3 class="text-xl font-bold text-slate-100 mb-2">{m.example_3_title()}</h3>
 				<p class="text-slate-400 mb-4">{m.example_3_desc()}</p>
-				<CodeBlock code={example3} title={m.example_3_title()} />
+				<CodeBlock code={m.example_3_code()} title={m.example_3_title()} />
 			</div>
 		</div>
 	</div>

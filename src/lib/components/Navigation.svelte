@@ -52,9 +52,9 @@
 				{/each}
 			</div>
 
-			<!-- 언어 전환 (데스크톱) -->
+			<!-- 언어 전환 (데스크톱) - 드롭다운 메뉴 -->
 			<div class="hidden lg:block">
-				<LanguageSwitcher />
+				<LanguageSwitcher variant="dropdown" />
 			</div>
 
 			<!-- 모바일 메뉴 버튼 -->

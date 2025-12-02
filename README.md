@@ -27,12 +27,32 @@ Humans cannot communicate directly with AI. AI Lang provides a structured way to
 - **Extensible Meta-Language**: Flexible structure based on sub-rules that can be applied even when models change
 - **Intent-to-Action Loss Minimization**: Reduces ambiguity and compresses meaning into a form that AI can execute precisely
 
+## Core Keywords (11)
+
+| Keyword | Description |
+|---------|-------------|
+| **intent** (required) | Declares the intent or purpose |
+| **reason** | Explains why this task is necessary |
+| **persona** | Assigns role and expertise |
+| **context** | Defines domain, language, framework |
+| **current_state** | Describes current code/situation/problem state |
+| **reproduce** | Steps to reproduce errors or bugs |
+| **expected_result** | Desired final outcome or behavior |
+| **guidelines** | Step-by-step work guidelines or rules |
+| **constraints** | Must/should/must_not conditions |
+| **output** | Output format and structure |
+| **style** | Response tone and style |
+
 ## Grammar (YAML-based)
 
 AI Lang uses YAML format to convey intent to AI in a structured way:
 
 ```yaml
 intent: CREATE. Add a chat feature.
+
+reason: |
+  Need to implement real-time communication
+  between users for the new social feature.
 
 persona:
   role: Python Backend Developer
@@ -42,6 +62,19 @@ context:
   domain: Software Development
   language: Python
   framework: FastAPI
+
+current_state: |
+  No existing authentication system.
+  New API endpoints are needed.
+
+expected_result: |
+  Complete authentication API with JWT
+  token issuance, validation, and refresh.
+
+guidelines:
+  - Implement token issuance endpoint first
+  - Add token validation middleware
+  - Implement refresh token logic
 
 constraints:
   must:

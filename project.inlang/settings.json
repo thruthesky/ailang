@@ -10,6 +10,9 @@
 	"baseLocale": "en",
 	"locales": [
 		"en",
-		"ko"
+		"ko",
+		"zh-Hans",
+		"ja",
+		"es"
 	]
 }
